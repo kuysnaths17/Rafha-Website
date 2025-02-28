@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Schedulepage() {
   return (
-    <div className="relative mt-[50] z-[90]">
+    <div className="relative z-[90]">
       <section
         id="branch"
         className="flex-grow flex flex-col justify-center items-center bg-pink-300 h-[850px] p-10 text-white text-2xl relative"
