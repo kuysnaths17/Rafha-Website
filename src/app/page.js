@@ -84,83 +84,21 @@ export default function Page() {
           ))}
         </div>
       </nav>
-      <div className="w-max h-[100%]">
+      <div className="w-max h-[3400px]">
         <Image
           alt="Mountains"
           src={`/images/RAFHA-BACKGROUND.png`}
           quality={100}
-          fill
-          sizes="100vw"
+          width={1920}
+          height={3400}
           style={{
-            objectFit: "fill",
+            objectFit: "cover",
+            back
           }}
         />
+        
       </div>
-      <div className="">
-        <section
-          id="home"
-          className="flex-grow flex flex-col justify-center items-center bg-pink-300 p-10 text-white text-2xl relative h-[850px]"
-        >
-          <p className="mb-6">HOME</p>
-          <div className="relative">
-            <Image
-              src="/images/doctorwoman.png"
-              alt="Clinic Interior"
-              width={400}
-              height={300}
-              className="rounded-lg"
-            />
-          </div>
-        </section>
-
-        <section
-          id="branch"
-          className="flex-grow flex flex-col justify-center items-center bg-pink-300 p-10 text-white text-2xl relative h-[850px]"
-        >
-          <p className="mb-6">BRANCH</p>
-          <div className="relative">
-            <Image
-              src="/images/doctorwoman.png"
-              alt="Clinic Interior"
-              width={400}
-              height={300}
-              className="rounded-lg"
-            />
-          </div>
-        </section>
-
-        <section
-          id="schedule"
-          className="flex-grow flex flex-col justify-center items-center bg-pink-300 p-10 text-white text-2xl relative h-[850px]"
-        >
-          <p className="mb-6">SCHEDULE</p>
-          <div className="relative">
-            <Image
-              src="/images/doctorwoman.png"
-              alt="Clinic Interior"
-              width={400}
-              height={300}
-              className="rounded-lg"
-            />
-          </div>
-        </section>
-
-        <section
-          id="about"
-          className="flex-grow flex flex-col justify-center items-center bg-pink-300 p-10 text-white text-2xl relative h-[850px]"
-        >
-          <p className="mb-6">ABOUT</p>
-          <div className="relative">
-            <Image
-              src="/images/doctorwoman.png"
-              alt="Clinic Interior"
-              width={400}
-              height={300}
-              className="rounded-lg"
-            />
-          </div>
-        </section>
-      </div>
+      
     </div>
   );
 }
