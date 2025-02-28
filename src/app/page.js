@@ -4,6 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import localFont from 'next/font/local';
+import { FaPhoneVolume } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { FaFacebook } from "react-icons/fa";
+
+
+
+
 const kaushan = localFont({
   src: "./fonts/KaushanScript-Regular.ttf",
 })
@@ -15,17 +22,26 @@ export default function Page() {
     <div className="min-h-screen flex flex-col">
       <div className="bg-white-100 p-2 flex justify-end text-sm text-gray-700 px-6">
         <div className="flex space-x-4">
-          <span>📞 09084348181</span>
-          <span>📧 aysonrafha@gmail.com</span>
-          <span>
-            🔗 <a href="https://www.facebook.com/rafha.glorious" target="_blank" rel="noopener noreferrer" className="text-blue-600">Facebook</a>
-          </span>
+          <div className={`flex justify-center items-center gap-1`}>
+            <span><FaPhoneVolume/></span>
+            <span> 09084348181</span>
+          </div>
+          <div className={`flex justify-center items-center gap-1`}>
+            <span><MdEmail/></span>
+            <span>aysonrafha@gmail.com</span>
+          </div>
+          <div className={`flex justify-center items-center gap-1`}>
+            <span><FaFacebook/></span>
+            <span>
+              <a href='https://www.facebook.com/rafha.glorious' target='_blank'>Rafha Paanakan Glorious</a>
+            </span>
+          </div>
         </div>
       </div>
 
       <nav className="bg-white shadow-md p-4 flex justify-between items-center px-6">
         <div className="flex items-center space-x-3">
-          <Image src="/images/rafalogo.png" alt="Clinic Logo" width={85} height={85} />
+          <Image src="/images/rafalogo.png" alt="Clinic Logo" width={90} height={90} />
           <div className={`flex-row `}>
             <div className={`text-4xl font-bold text-gray-800 ${kaushan.className}`}>Rafha</div>
             <div className={`font-semibold`}>GLORIOUS CARE AND MULTI-SPECIALTY CLINIC</div>
