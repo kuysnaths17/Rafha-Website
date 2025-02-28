@@ -1,39 +1,44 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import localFont from 'next/font/local';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import localFont from "next/font/local";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 
-
-
-
 const kaushan = localFont({
   src: "./fonts/KaushanScript-Regular.ttf",
-})
+});
 
 export default function Page() {
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState("home");
 
   return (
     <div className="min-h-screen flex flex-col">
       <div className="bg-white-100 p-2 flex justify-end text-sm text-gray-700 px-6">
         <div className="flex space-x-4">
           <div className={`flex justify-center items-center gap-1`}>
-            <span><FaPhoneVolume/></span>
+            <span>
+              <FaPhoneVolume />
+            </span>
             <span> 09084348181</span>
           </div>
           <div className={`flex justify-center items-center gap-1`}>
-            <span><MdEmail/></span>
+            <span>
+              <MdEmail />
+            </span>
             <span>aysonrafha@gmail.com</span>
           </div>
           <div className={`flex justify-center items-center gap-1`}>
-            <span><FaFacebook/></span>
             <span>
-              <a href='https://www.facebook.com/rafha.glorious' target='_blank'>Rafha Paanakan Glorious</a>
+              <FaFacebook />
+            </span>
+            <span>
+              <a href="https://www.facebook.com/rafha.glorious" target="_blank">
+                Rafha Paanakan Glorious
+              </a>
             </span>
           </div>
         </div>
@@ -41,19 +46,33 @@ export default function Page() {
 
       <nav className="bg-white shadow-md p-4 flex justify-between items-center px-6">
         <div className="flex items-center space-x-3">
-          <Image src="/images/rafalogo.png" alt="Clinic Logo" width={90} height={90} />
+          <Image
+            src="/images/rafalogo.png"
+            alt="Clinic Logo"
+            width={90}
+            height={90}
+          />
           <div className={`flex-row `}>
-            <div className={`text-4xl font-bold text-gray-800 ${kaushan.className}`}>Rafha</div>
-            <div className={`font-semibold`}>GLORIOUS CARE AND MULTI-SPECIALTY CLINIC</div>
+            <div
+              className={`text-4xl font-bold text-gray-800 ${kaushan.className}`}
+            >
+              Rafha
+            </div>
+            <div className={`font-semibold`}>
+              GLORIOUS CARE AND MULTI-SPECIALTY CLINIC
+            </div>
           </div>
         </div>
 
         <div className="flex space-x-6">
-          {['home', 'branch', 'schedule', 'about'].map((tab) => (
+          {["home", "branch", "schedule", "about"].map((tab) => (
             <Link key={tab} href={`/${tab}`}>
               <span
-                className={`cursor-pointer capitalize p-2 rounded-md transition-all ${activeTab === tab ? 'bg-pink-600 text-white' : 'text-gray-800 hover:text-pink-600'
-                  }`}
+                className={`cursor-pointer capitalize p-2 rounded-md transition-all ${
+                  activeTab === tab
+                    ? "bg-pink-600 text-white"
+                    : "text-gray-800 hover:text-pink-600"
+                }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
@@ -63,7 +82,22 @@ export default function Page() {
         </div>
       </nav>
 
-      <section className="flex-grow flex flex-col justify-center items-center bg-pink-300 p-10 text-white text-2xl relative">
+      <div>
+        
+      </div>
+      <section
+        className={`flex-grow flex flex-col justify-center items-center bg-pink-300 p-10 text-white text-2xl relative h-[800px]`}
+      >
+        <Image
+          alt="Mountains"
+          src={`/images/rafha-bg.png`}
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "fill",
+          }}
+        />
         <p className="mb-6">HOME</p>
 
         <div className="relative">
