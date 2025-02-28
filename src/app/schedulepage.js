@@ -3,14 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Homepage() {
+export default function Schedulepage() {
   return (
-    <div className="relative z-[90]">
+    <div className="relative mt-[50] z-[90]">
       <section
-        id="home"
-        className="flex-grow flex flex-col justify-center items-center h-[825px] bg-pink-300 bg-blend-color-dodge p-10 text-white text-2xl relative"
+        id="branch"
+        className="flex-grow flex flex-col justify-center items-center bg-pink-300 h-[850px] p-10 text-white text-2xl relative"
       >
-        <p className="mb-6">HOME</p>
+        <p className="mb-6">Schedule</p>
         <div className="relative">
           <Image
             src="/images/doctorwoman.png"

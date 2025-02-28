@@ -8,25 +8,19 @@ import { MdEmail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import Nav from "./nav";
 import Homepage from "./homepage";
+import Branchpage from "./branchpage";
+import Schedulepage from "./schedulepage";
 
 const kaushan = localFont({
   src: "./fonts/KaushanScript-Regular.ttf",
 });
 
 export default function Page() {
-  const [activeTab, setActiveTab] = useState("home");
-
-  const ScrollNiBio = (id) => {
-    setActiveTab(id);
-    document
-      .getElementById(id)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <div className="relative min-h-screen flex flex-col z-[100]">
       <Nav/>
-      <div className="w-max h-[3400px]">
+      
+      <div className="w-fit h-[3400px] absolute ">
         <Image
           alt="Mountains"
           src={`/images/RAFHA-BACKGROUND.png`}
@@ -39,8 +33,10 @@ export default function Page() {
           }}
         />
       </div>
-      <div className="absolute">
+      <div>
           <Homepage/>
+          <Branchpage/>
+          <Schedulepage/>
       </div>
     </div>
   );
