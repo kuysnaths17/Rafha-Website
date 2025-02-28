@@ -10,6 +10,7 @@ import Nav from "./nav";
 import Homepage from "./homepage";
 import Branchpage from "./branchpage";
 import Schedulepage from "./schedulepage";
+import Aboutpage from "./aboutpage";
 
 const kaushan = localFont({
   src: "./fonts/KaushanScript-Regular.ttf",
@@ -37,6 +38,7 @@ export default function Page() {
           <Homepage/>
           <Branchpage/>
           <Schedulepage/>
+          <Aboutpage/>
       </div>
     </div>
   );
